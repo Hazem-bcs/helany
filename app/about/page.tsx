@@ -1,14 +1,18 @@
+'use client'
+
 import { FaGraduationCap, FaAward, FaCertificate, FaHeart } from 'react-icons/fa'
 import Image from 'next/image'
+import { useState } from 'react'
 
 export default function AboutPage() {
+  const [imageError, setImageError] = useState(false)
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary to-secondary text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">عن الطبيب</h1>
-          <p className="text-xl text-gray-100">د. محمد حلاني - خبير طب وجراحة الأسنان</p>
+          <p className="text-xl text-gray-100">د. محمد حلاني - تشخيص ومعالجة أمراض اللثة والفم والأسنان</p>
         </div>
       </section>
 
@@ -19,14 +23,20 @@ export default function AboutPage() {
             {/* Image */}
             <div className="relative">
               <div className="relative bg-gradient-to-br from-primary to-secondary rounded-3xl p-8 shadow-2xl">
-                <div className="aspect-[3/4] bg-white rounded-2xl flex items-center justify-center">
-                  {/* Placeholder for doctor's image */}
-                  <div className="text-center p-8">
-                    <div className="w-48 h-48 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-6xl text-white">👨‍⚕️</span>
+                <div className="aspect-[3/4] bg-white rounded-2xl overflow-hidden">
+                  {!imageError ? (
+                    <img 
+                      src="/images/doctor.jpg" 
+                      alt="د. محمد حلاني"
+                      className="w-full h-full object-cover"
+                      onError={() => setImageError(true)}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-primary to-secondary">
+                      <span className="text-8xl text-white mb-4">👨‍⚕️</span>
+                      <p className="text-white text-lg font-semibold">د. محمد حلاني</p>
                     </div>
-                    <p className="text-gray-500 text-sm">ضع صورة الطبيب هنا</p>
-                  </div>
+                  )}
                 </div>
               </div>
               {/* Decorative elements */}

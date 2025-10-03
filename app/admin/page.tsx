@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { FaCalendarAlt, FaUser, FaPhone, FaEnvelope, FaClock, FaCheckCircle, FaTimesCircle, FaSignOutAlt } from 'react-icons/fa'
+import { FaCalendarAlt, FaUser, FaPhone, FaEnvelope, FaClock, FaCheckCircle, FaTimesCircle, FaSignOutAlt, FaTrash, FaHistory } from 'react-icons/fa'
 import { format } from 'date-fns'
 import { ar } from 'date-fns/locale'
 
@@ -24,6 +24,7 @@ export default function AdminDashboard() {
   const [filter, setFilter] = useState<'all' | 'pending' | 'confirmed' | 'cancelled'>('all')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
+  const [showDeleteOld, setShowDeleteOld] = useState(false)
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
@@ -76,6 +77,61 @@ export default function AdminDashboard() {
       }
     } catch (err) {
       console.error('Error updating appointment:', err)
+    }
+  }
+
+  const deleteAppointment = async (id: string) => {
+    if (!confirm('هل أنت متأكد من حذف هذا الموعد؟ لا يمكن التراجع عن هذا الإجراء.')) {
+      return
+    }
+
+    try {
+      const response = await fetch('/api/admin/appointments/delete', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id }),
+      })
+
+      if (response.ok) {
+        loadAppointments()
+      } else {
+        setError('فشل في حذف الموعد')
+      }
+    } catch (err) {
+      setError('حدث خطأ في الاتصال')
+    }
+  }
+
+  const deleteOldAppointments = async () => {
+    const sixMonthsAgo = new Date()
+    sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6)
+    const cutoffDate = sixMonthsAgo.toISOString().split('T')[0]
+
+    if (!confirm(`هل أنت متأكد من حذف جميع المواعيد الأقدم من ${cutoffDate}؟ لا يمكن التراجع عن هذا الإجراء.`)) {
+      return
+    }
+
+    try {
+      const response = await fetch('/api/admin/appointments/delete-old', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ cutoffDate }),
+      })
+
+      if (response.ok) {
+        const result = await response.json()
+        alert(`تم حذف ${result.deletedCount} موعد قديم`)
+        loadAppointments()
+        setShowDeleteOld(false)
+      } else {
+        setError('فشل في حذف المواعيد القديمة')
+      }
+    } catch (err) {
+      setError('حدث خطأ في الاتصال')
     }
   }
 
@@ -145,13 +201,22 @@ export default function AdminDashboard() {
               <h1 className="text-3xl font-bold mb-2">لوحة التحكم</h1>
               <p className="text-gray-100">إدارة المواعيد والحجوزات</p>
             </div>
-            <button
-              onClick={handleLogout}
-              className="bg-white bg-opacity-20 hover:bg-opacity-30 px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
-            >
-              <FaSignOutAlt />
-              تسجيل الخروج
-            </button>
+            <div className="flex gap-4">
+              <button
+                onClick={() => setShowDeleteOld(!showDeleteOld)}
+                className="bg-orange-500 bg-opacity-80 hover:bg-opacity-100 px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
+              >
+                <FaHistory />
+                حذف المواعيد القديمة
+              </button>
+              <button
+                onClick={handleLogout}
+                className="bg-white bg-opacity-20 hover:bg-opacity-30 px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
+              >
+                <FaSignOutAlt />
+                تسجيل الخروج
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -297,6 +362,14 @@ export default function AdminDashboard() {
                         </button>
                       </>
                     )}
+                    
+                    <button
+                      onClick={() => deleteAppointment(appointment.id)}
+                      className="bg-gray-500 text-white px-4 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center gap-2"
+                    >
+                      <FaTrash />
+                      حذف الموعد
+                    </button>
                   </div>
                 </div>
               </div>
@@ -304,6 +377,32 @@ export default function AdminDashboard() {
           </div>
         )}
       </div>
+
+      {/* Delete Old Appointments Modal */}
+      {showDeleteOld && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-8 max-w-md w-full mx-4">
+            <h3 className="text-2xl font-bold text-primary mb-4">حذف المواعيد القديمة</h3>
+            <p className="text-gray-600 mb-6">
+              سيتم حذف جميع المواعيد الأقدم من 6 أشهر. هذا الإجراء لا يمكن التراجع عنه.
+            </p>
+            <div className="flex gap-4">
+              <button
+                onClick={deleteOldAppointments}
+                className="bg-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition-all duration-300 flex-1"
+              >
+                حذف المواعيد القديمة
+              </button>
+              <button
+                onClick={() => setShowDeleteOld(false)}
+                className="bg-gray-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 flex-1"
+              >
+                إلغاء
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

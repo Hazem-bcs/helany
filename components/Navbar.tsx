@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FaBars, FaTimes, FaPhone, FaTooth } from 'react-icons/fa'
 
 export default function Navbar() {
@@ -22,7 +23,18 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="bg-primary p-2 rounded-lg group-hover:bg-secondary transition-colors duration-300">
-              <FaTooth className="text-white text-2xl" />
+              <Image 
+                src="/images/logo.png" 
+                alt="شعار عيادة د. محمد حلاني" 
+                width={32} 
+                height={32}
+                className="w-8 h-8"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none'
+                  e.currentTarget.nextElementSibling.style.display = 'block'
+                }}
+              />
+              <FaTooth className="text-white text-2xl hidden" />
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-primary">د. محمد حلاني</span>
