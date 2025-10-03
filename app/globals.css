@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  direction: rtl;
+}
+
+body {
+  font-family: 'Cairo', 'Tajawal', system-ui, sans-serif;
+  direction: rtl;
+  text-align: right;
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d1e9f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1865ab;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7fbce7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease-out;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold 
+         hover:bg-opacity-90 transition-all duration-300 
+         shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white px-6 py-3 rounded-lg font-semibold 
+         hover:bg-opacity-90 transition-all duration-300;
+}
+
+.btn-outline {
+  @apply border-2 border-primary text-primary px-6 py-3 rounded-lg 
+         font-semibold hover:bg-primary hover:text-white 
+         transition-all duration-300;
+}
+
+/* Card Styles */
+.card {
+  @apply bg-white rounded-xl shadow-lg p-6 
+         transition-all duration-300 hover:shadow-2xl 
+         border border-accent;
+}
+
+/* Section Styles */
+.section {
+  @apply py-16 px-4 md:px-8;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold text-center mb-12 
+         text-primary relative inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #1865ab, #7fbce7);
+  border-radius: 2px;
+}
+
+/* Form Styles */
+.form-input {
+  @apply w-full px-4 py-3 border-2 border-gray-300 rounded-lg 
+         focus:border-primary focus:outline-none 
+         transition-colors duration-300;
+}
+
+.form-label {
+  @apply block text-sm font-semibold mb-2 text-gray-700;
+}
+
+/* Calendar Custom Styles */
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  padding: 20px !important;
+  font-family: 'Cairo', sans-serif !important;
+}
+
+.react-calendar__tile--active {
+  background: #1865ab !important;
+  color: white !important;
+}
+
+.react-calendar__tile--now {
+  background: #d1e9f9 !important;
+}
+
+.react-calendar__tile:enabled:hover {
+  background: #7fbce7 !important;
+  color: white !important;
+}
+
+/* Loading Spinner */
+.spinner {
+  border: 3px solid #d1e9f9;
+  border-top: 3px solid #1865ab;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .section-title {
+    @apply text-2xl;
+  }
+}
+
+
