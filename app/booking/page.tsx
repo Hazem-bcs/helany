@@ -42,6 +42,7 @@ export default function BookingPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [error, setError] = useState<string>('')
+  const [successData, setSuccessData] = useState<{date: string, time: string} | null>(null)
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm<BookingFormData>()
 
@@ -95,6 +96,10 @@ export default function BookingPage() {
       })
 
       if (response.ok) {
+        setSuccessData({
+          date: format(selectedDate, 'EEEE، d MMMM yyyy', { locale: ar }),
+          time: selectedTime
+        })
         setIsSuccess(true)
         reset()
         setSelectedDate(null)
@@ -119,11 +124,11 @@ export default function BookingPage() {
           </div>
           <h2 className="text-3xl font-bold text-primary mb-4">تم الحجز بنجاح!</h2>
           <p className="text-gray-600 mb-6">
-            شكراً لك! تم تأكيد موعدك. سيتم إرسال رسالة تأكيد إلى بريدك الإلكتروني.
+            شكراً لك! تم ارسال طلب موعدك. سيتم إرسال رسالة تأكيد إلى بريدك الإلكتروني.
           </p>
           <div className="space-y-2 text-right bg-gray-50 p-4 rounded-lg mb-6">
-            <p><span className="font-semibold">التاريخ:</span> {selectedDate && format(selectedDate, 'EEEE، d MMMM yyyy', { locale: ar })}</p>
-            <p><span className="font-semibold">الوقت:</span> {selectedTime}</p>
+            <p><span className="font-semibold">التاريخ:</span> {successData?.date}</p>
+            <p><span className="font-semibold">الوقت:</span> {successData?.time}</p>
           </div>
           <button
             onClick={() => {

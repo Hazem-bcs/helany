@@ -31,6 +31,7 @@ export async function POST(request: NextRequest) {
             .content { padding: 30px; }
             .info-box { background-color: #d1e9f9; padding: 20px; border-radius: 8px; margin: 20px 0; }
             .footer { text-align: center; padding: 20px; color: #666; }
+            .phone-number { direction: ltr; text-align: right; font-family: monospace; font-size: 18px; color: #1865ab; font-weight: bold; }
           </style>
         </head>
         <body>
@@ -57,7 +58,110 @@ export async function POST(request: NextRequest) {
                 <li>إذا كانت لديك أية أسئلة، لا تتردد في الاتصال بنا</li>
               </ul>
 
-              <p><strong>رقم الهاتف:</strong> 963-XXX-XXXXXX</p>
+              <p><strong>رقم الهاتف:</strong></p>
+              <p class="phone-number">+963 962 625 044</p>
+            </div>
+            <div class="footer">
+              <p>عيادة د. محمد حلاني للأسنان</p>
+              <p>جامعة قرطبة كلية طب الاسنان<br />جانب ساعة باب الفرج</p>
+            </div>
+          </div>
+        </body>
+        </html>
+      `
+    } else if (type === 'approved') {
+      htmlContent = `
+        <!DOCTYPE html>
+        <html dir="rtl" lang="ar">
+        <head>
+          <meta charset="UTF-8">
+          <style>
+            body { font-family: Arial, sans-serif; background-color: #f5f5f5; }
+            .container { max-width: 600px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 10px; }
+            .header { background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+            .content { padding: 30px; }
+            .info-box { background-color: #d4edda; padding: 20px; border-radius: 8px; margin: 20px 0; }
+            .footer { text-align: center; padding: 20px; color: #666; }
+            .phone-number { direction: ltr; text-align: right; font-family: monospace; font-size: 18px; color: #28a745; font-weight: bold; }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="header">
+              <h1>✅ تم قبول موعدك</h1>
+              <p>عيادة د. محمد حلاني للأسنان</p>
+            </div>
+            <div class="content">
+              <h2>عزيزي/عزيزتي ${appointmentData.patient_name}</h2>
+              <p>نحن سعداء لإعلامك بأن موعدك قد تم قبوله! نتطلع لرؤيتك قريباً.</p>
+              
+              <div class="info-box">
+                <h3>تفاصيل الموعد المؤكد:</h3>
+                <p><strong>التاريخ:</strong> ${appointmentData.date}</p>
+                <p><strong>الوقت:</strong> ${appointmentData.time}</p>
+                <p><strong>سبب الزيارة:</strong> ${appointmentData.reason}</p>
+              </div>
+
+              <h3>ملاحظات هامة:</h3>
+              <ul>
+                <li>يرجى الوصول قبل موعدك بـ 10 دقائق</li>
+                <li>في حالة الحاجة لإلغاء أو تعديل الموعد، يرجى الاتصال بنا قبل 24 ساعة على الأقل</li>
+                <li>إذا كانت لديك أية أسئلة، لا تتردد في الاتصال بنا</li>
+              </ul>
+
+              <p><strong>رقم الهاتف:</strong></p>
+              <p class="phone-number">+963 962 625 044</p>
+            </div>
+            <div class="footer">
+              <p>عيادة د. محمد حلاني للأسنان</p>
+              <p>جامعة قرطبة كلية طب الاسنان<br />جانب ساعة باب الفرج</p>
+            </div>
+          </div>
+        </body>
+        </html>
+      `
+    } else if (type === 'rejected') {
+      htmlContent = `
+        <!DOCTYPE html>
+        <html dir="rtl" lang="ar">
+        <head>
+          <meta charset="UTF-8">
+          <style>
+            body { font-family: Arial, sans-serif; background-color: #f5f5f5; }
+            .container { max-width: 600px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 10px; }
+            .header { background: linear-gradient(135deg, #dc3545, #fd7e14); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+            .content { padding: 30px; }
+            .info-box { background-color: #f8d7da; padding: 20px; border-radius: 8px; margin: 20px 0; }
+            .footer { text-align: center; padding: 20px; color: #666; }
+            .phone-number { direction: ltr; text-align: right; font-family: monospace; font-size: 18px; color: #dc3545; font-weight: bold; }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="header">
+              <h1>❌ تم رفض موعدك</h1>
+              <p>عيادة د. محمد حلاني للأسنان</p>
+            </div>
+            <div class="content">
+              <h2>عزيزي/عزيزتي ${appointmentData.patient_name}</h2>
+              <p>نأسف لإعلامك بأن موعدك المطلوب غير متاح في الوقت المحدد.</p>
+              
+              <div class="info-box">
+                <h3>تفاصيل الموعد المرفوض:</h3>
+                <p><strong>التاريخ:</strong> ${appointmentData.date}</p>
+                <p><strong>الوقت:</strong> ${appointmentData.time}</p>
+                <p><strong>سبب الزيارة:</strong> ${appointmentData.reason}</p>
+              </div>
+
+              <h3>البدائل المتاحة:</h3>
+              <ul>
+                <li>يمكنك حجز موعد جديد في تاريخ ووقت آخر</li>
+                <li>يرجى الاتصال بنا لترتيب موعد مناسب</li>
+                <li>نعتذر عن أي إزعاج قد تسببناه لك</li>
+              </ul>
+
+              <p><strong>رقم الهاتف:</strong></p>
+              <p class="phone-number">+963 962 625 044</p>
             </div>
             <div class="footer">
               <p>عيادة د. محمد حلاني للأسنان</p>
