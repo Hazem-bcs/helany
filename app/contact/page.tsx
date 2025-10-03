@@ -32,8 +32,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-dark mb-2">الهاتف</h3>
-                    <a href="tel:+963XXXXXXXXX" className="text-secondary hover:text-primary transition-colors">
-                      +963-XXX-XXXXXX
+                    <a href="tel:+963962625044" className="text-secondary hover:text-primary transition-colors">
+                      963-962-625044
                     </a>
                     <p className="text-sm text-gray-600 mt-1">متاح من السبت إلى الخميس</p>
                   </div>
@@ -45,8 +45,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-dark mb-2">البريد الإلكتروني</h3>
-                    <a href="mailto:info@dentalclinic.com" className="text-secondary hover:text-primary transition-colors">
-                      info@dentalclinic.com
+                    <a href="mailto:mohammadhilany32@gmail.com" className="text-secondary hover:text-primary transition-colors">
+                      mohammadhilany32@gmail.com
                     </a>
                     <p className="text-sm text-gray-600 mt-1">نرد خلال 24 ساعة</p>
                   </div>
@@ -58,8 +58,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-dark mb-2">العنوان</h3>
-                    <p className="text-gray-700">دمشق، سوريا</p>
-                    <p className="text-sm text-gray-600 mt-1">[العنوان التفصيلي هنا]</p>
+                    <p className="text-gray-700">جامعة قرطبة كلية طب الاسنان<br />جانب ساعة باب الفرج</p>
                   </div>
                 </div>
 
@@ -70,8 +69,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-dark mb-2">ساعات العمل</h3>
                     <div className="space-y-1 text-gray-700">
-                      <p>السبت - الخميس: 9:00 ص - 8:00 م</p>
-                      <p>الجمعة: مغلق</p>
+                      <p>أوقات العمل مرنة</p>
+                      <p>حسب موعد المريض</p>
                     </div>
                   </div>
                 </div>
@@ -81,30 +80,30 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-bold text-dark mb-4 text-xl">تابعنا على</h3>
                 <div className="flex gap-4">
-                  <a
-                    href="https://facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-blue-600 p-4 rounded-lg text-white hover:bg-blue-700 transition-colors"
-                  >
-                    <FaFacebook className="text-2xl" />
-                  </a>
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-purple-500 to-pink-500 p-4 rounded-lg text-white hover:opacity-90 transition-opacity"
-                  >
-                    <FaInstagram className="text-2xl" />
-                  </a>
-                  <a
-                    href="https://wa.me/963XXXXXXXXX"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-green-500 p-4 rounded-lg text-white hover:bg-green-600 transition-colors"
-                  >
-                    <FaWhatsapp className="text-2xl" />
-                  </a>
+              <a
+                href="https://www.facebook.com/mohamd.helany.3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 p-4 rounded-lg text-white hover:bg-blue-700 transition-colors"
+              >
+                <FaFacebook className="text-2xl" />
+              </a>
+              <a
+                href="https://www.instagram.com/mohamad_helany/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 p-4 rounded-lg text-white hover:opacity-90 transition-opacity"
+              >
+                <FaInstagram className="text-2xl" />
+              </a>
+              <a
+                href="https://wa.me/963962625044"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 p-4 rounded-lg text-white hover:bg-green-600 transition-colors"
+              >
+                <FaWhatsapp className="text-2xl" />
+              </a>
                 </div>
               </div>
             </div>
@@ -116,7 +115,7 @@ export default function ContactPage() {
                 <h3 className="font-bold text-dark mb-4 text-xl">موقع العيادة</h3>
                 <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.3461234567890!2d36.2765!3d33.5138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDMwJzQ5LjciTiAzNsKwMTYnMzUuNCJF!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3697.365485080407!2d37.15028327628962!3d36.203655072423125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152ff9424ffca967%3A0xa54cefcb775112fc!2z2KfZhNi52YrYp9iv2KfYqiDYp9mE2LPZhtmK2Kkg2YTYrNin2YXYudipINmC2LHYt9io2Kkg2KfZhNiu2KfYtdipIERlbnRhbCBjbGluaWNzIG9mIHRoZSBVbml2ZXJzaXR5IG9mIENvcmRvYmE!5e1!3m2!1sen!2sus!4v1759461015395!5m2!1sen!2sus"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

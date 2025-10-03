@@ -29,7 +29,7 @@ export default function CallToAction() {
           </Link>
 
           <a
-            href="tel:+963XXXXXXXXX"
+            href="tel:+963962625044"
             className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-primary transition-all duration-300 flex items-center gap-3"
           >
             <FaPhone className="text-xl" />
@@ -37,7 +37,7 @@ export default function CallToAction() {
           </a>
 
           <a
-            href="https://wa.me/963XXXXXXXXX"
+            href="https://wa.me/963962625044"
             className="bg-green-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-green-600 transition-all duration-300 flex items-center gap-3 shadow-xl"
           >
             <FaWhatsapp className="text-xl" />
@@ -49,18 +49,18 @@ export default function CallToAction() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           <div className="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
             <p className="font-bold text-lg mb-2">ساعات العمل</p>
-            <p className="text-gray-100">السبت - الخميس: 9 صباحاً - 8 مساءً</p>
-            <p className="text-gray-100">الجمعة: مغلق</p>
+            <p className="text-gray-100">أوقات العمل مرنة</p>
+            <p className="text-gray-100">حسب موعد المريض</p>
           </div>
 
           <div className="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
             <p className="font-bold text-lg mb-2">اتصل بنا</p>
-            <p className="text-gray-100 text-lg">+963-XXX-XXXXXX</p>
+            <p className="text-gray-100 text-lg">963-962-625044</p>
           </div>
 
           <div className="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
             <p className="font-bold text-lg mb-2">الموقع</p>
-            <p className="text-gray-100">دمشق، سوريا</p>
+            <p className="text-gray-100">جامعة قرطبة كلية طب الاسنان<br />جانب ساعة باب الفرج</p>
           </div>
         </div>
       </div>

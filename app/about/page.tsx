@@ -37,14 +37,14 @@ export default function AboutPage() {
             {/* Text Content */}
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-primary">د. محمد حلاني</h2>
-              <p className="text-xl text-secondary font-semibold">اختصاصي طب وجراحة الأسنان</p>
+              <p className="text-xl text-secondary font-semibold">طالب سنة رابعة - كلية طب الأسنان</p>
               
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  مرحباً بكم في عيادتي! أنا د. محمد حلاني، طبيب أسنان متخصص بخبرة تزيد عن 15 عاماً في مجال طب وجراحة الأسنان. أؤمن بأن كل مريض يستحق أفضل رعاية ممكنة، وأسعى دائماً لتقديم خدمات طبية عالية الجودة بأحدث التقنيات.
+                  مرحباً بكم! أنا محمد حلاني، طالب في السنة الرابعة بكلية طب الأسنان في جامعة قرطبة بحلب. أؤمن بأن كل مريض يستحق أفضل رعاية ممكنة، وأسعى دائماً لتقديم خدمات طبية عالية الجودة بأحدث التقنيات.
                 </p>
                 <p>
-                  تخرجت من كلية طب الأسنان بجامعة دمشق، وحصلت على العديد من الشهادات والدورات التدريبية المتخصصة في مختلف مجالات طب الأسنان. أركز في عملي على الجمع بين المهارة الطبية والتقنيات الحديثة لضمان حصول مرضاي على أفضل النتائج.
+                  حاصل على شهادة تدريب لمدة سنتين وقد تعاملت مع العديد من المرضى من قبل. لدي شهادة إسعافات أولية وشهادات خبرة في مجال طب الأسنان والتعامل مع المرضى. أركز في عملي على الجمع بين المعرفة الأكاديمية والتطبيق العملي لضمان حصول مرضاي على أفضل النتائج.
                 </p>
                 <p>
                   فلسفتي في العلاج تقوم على الوقاية والتشخيص المبكر، مع التركيز على راحة المريض وتثقيفه حول أهمية العناية بصحة الفم والأسنان. أسعى لبناء علاقة ثقة مع كل مريض وتقديم خطة علاجية مخصصة تناسب احتياجاته.
@@ -66,22 +66,15 @@ export default function AboutPage() {
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2" />
                   <div>
-                    <p className="font-semibold text-dark">إجازة في طب وجراحة الأسنان</p>
-                    <p className="text-sm text-gray-600">جامعة دمشق - كلية طب الأسنان</p>
+                    <p className="font-semibold text-dark">طالب سنة رابعة في طب الأسنان</p>
+                    <p className="text-sm text-gray-600">جامعة قرطبة - حلب</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2" />
                   <div>
-                    <p className="font-semibold text-dark">دبلوم في زراعة الأسنان</p>
-                    <p className="text-sm text-gray-600">معهد التدريب المتقدم</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2" />
-                  <div>
-                    <p className="font-semibold text-dark">دورة متقدمة في التجميل</p>
-                    <p className="text-sm text-gray-600">الأكاديمية الأوروبية لطب الأسنان</p>
+                    <p className="font-semibold text-dark">شهادة الثانوية العامة</p>
+                    <p className="text-sm text-gray-600">قسم علمي</p>
                   </div>
                 </li>
               </ul>
@@ -98,22 +91,29 @@ export default function AboutPage() {
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-secondary rounded-full mt-2" />
                   <div>
-                    <p className="font-semibold text-dark">عضو نقابة أطباء الأسنان السورية</p>
-                    <p className="text-sm text-gray-600">منذ عام 2008</p>
+                    <p className="font-semibold text-dark">شهادة تدريب عملي لمدة سنتين</p>
+                    <p className="text-sm text-gray-600">خبرة عملية مع المرضى في العيادات</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-secondary rounded-full mt-2" />
                   <div>
-                    <p className="font-semibold text-dark">شهادة التعقيم ومكافحة العدوى</p>
-                    <p className="text-sm text-gray-600">منظمة الصحة العالمية</p>
+                    <p className="font-semibold text-dark">شهادة إسعافات أولية</p>
+                    <p className="text-sm text-gray-600">معتمدة ومحدثة</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-secondary rounded-full mt-2" />
                   <div>
-                    <p className="font-semibold text-dark">شهادات متقدمة في التقويم</p>
-                    <p className="text-sm text-gray-600">جمعية التقويم الدولية</p>
+                    <p className="font-semibold text-dark">شهادات خبرة في طب الأسنان</p>
+                    <p className="text-sm text-gray-600">التعامل مع المرضى وتقنيات العلاج</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-secondary rounded-full mt-2" />
+                  <div>
+                    <p className="font-semibold text-dark">دورات في التعامل مع المرضى</p>
+                    <p className="text-sm text-gray-600">مهارات التواصل والرعاية الطبية</p>
                   </div>
                 </li>
               </ul>
@@ -132,11 +132,11 @@ export default function AboutPage() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                 <div className="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
-                  <p className="text-2xl font-bold mb-2">+15</p>
-                  <p className="text-sm">سنة خبرة</p>
+                  <p className="text-2xl font-bold mb-2">3</p>
+                  <p className="text-sm">سنوات متدرب</p>
                 </div>
                 <div className="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">
-                  <p className="text-2xl font-bold mb-2">+5000</p>
+                  <p className="text-2xl font-bold mb-2">+30</p>
                   <p className="text-sm">مريض سعيد</p>
                 </div>
                 <div className="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm">

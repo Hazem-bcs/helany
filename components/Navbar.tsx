@@ -46,7 +46,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="tel:+963XXXXXXXXX"
+              href="tel:+963962625044"
               className="flex items-center gap-2 text-secondary hover:text-primary transition-colors duration-300"
             >
               <FaPhone className="text-lg" />

@@ -253,7 +253,7 @@ export default function BookingPage() {
                       })}
                       type="tel"
                       className="form-input"
-                      placeholder="+963-XXX-XXXXXX"
+                      placeholder="963-XXX-XXXXXX"
                     />
                     {errors.phone && (
                       <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>

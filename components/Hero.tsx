@@ -16,7 +16,7 @@ export default function Hero() {
           <div className="space-y-6 animate-fadeIn">
             <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
               <FaAward className="text-primary" />
-              <span className="text-sm font-semibold text-primary">خبرة +15 سنة في طب الأسنان</span>
+              <span className="text-sm font-semibold text-primary">3 سنوات متدرب في طب الأسنان</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -66,12 +66,12 @@ export default function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
               <div className="text-center">
-                <p className="text-3xl font-bold text-primary">+5000</p>
+                <p className="text-3xl font-bold text-primary">+30</p>
                 <p className="text-sm text-gray-600">مريض سعيد</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-bold text-secondary">+15</p>
-                <p className="text-sm text-gray-600">سنة خبرة</p>
+                <p className="text-3xl font-bold text-secondary">3</p>
+                <p className="text-sm text-gray-600">سنوات متدرب</p>
               </div>
               <div className="text-center">
                 <p className="text-3xl font-bold text-primary">100%</p>

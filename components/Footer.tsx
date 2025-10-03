@@ -72,26 +72,26 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-3">
                 <FaPhone className="text-accent" />
-                <a href="tel:+963XXXXXXXXX" className="text-gray-200 hover:text-accent transition-colors duration-300">
-                  +963-XXX-XXXXXX
+                <a href="tel:+963962625044" className="text-gray-200 hover:text-accent transition-colors duration-300">
+                  963-962-625044
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-accent" />
-                <a href="mailto:info@dentalclinic.com" className="text-gray-200 hover:text-accent transition-colors duration-300">
-                  info@dentalclinic.com
+                <a href="mailto:mohammadhilany32@gmail.com" className="text-gray-200 hover:text-accent transition-colors duration-300">
+                  mohammadhilany32@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-accent mt-1" />
-                <span className="text-gray-200">دمشق، سوريا</span>
+                <span className="text-gray-200">جامعة قرطبة كلية طب الاسنان<br />جانب ساعة باب الفرج</span>
               </li>
             </ul>
 
             {/* Social Media */}
             <div className="flex gap-4 mt-6">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/mohamd.helany.3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white bg-opacity-20 p-3 rounded-full hover:bg-accent hover:text-primary transition-all duration-300"
@@ -99,7 +99,7 @@ export default function Footer() {
                 <FaFacebook />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/mohamad_helany/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white bg-opacity-20 p-3 rounded-full hover:bg-accent hover:text-primary transition-all duration-300"
@@ -107,7 +107,7 @@ export default function Footer() {
                 <FaInstagram />
               </a>
               <a
-                href="https://wa.me/963XXXXXXXXX"
+                href="https://wa.me/963962625044"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white bg-opacity-20 p-3 rounded-full hover:bg-accent hover:text-primary transition-all duration-300"

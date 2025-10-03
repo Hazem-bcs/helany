@@ -57,11 +57,11 @@ export async function POST(request: NextRequest) {
                 <li>إذا كانت لديك أية أسئلة، لا تتردد في الاتصال بنا</li>
               </ul>
 
-              <p><strong>رقم الهاتف:</strong> +963-XXX-XXXXXX</p>
+              <p><strong>رقم الهاتف:</strong> 963-XXX-XXXXXX</p>
             </div>
             <div class="footer">
               <p>عيادة د. محمد حلاني للأسنان</p>
-              <p>دمشق، سوريا</p>
+              <p>جامعة قرطبة كلية طب الاسنان<br />جانب ساعة باب الفرج</p>
             </div>
           </div>
         </body>
