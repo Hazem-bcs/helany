@@ -30,8 +30,12 @@ export default function Navbar() {
                 height={32}
                 className="w-8 h-8"
                 onError={(e) => {
-                  e.currentTarget.style.display = 'none'
-                  e.currentTarget.nextElementSibling.style.display = 'block'
+                  const target = e.currentTarget as HTMLImageElement
+                  target.style.display = 'none'
+                  const nextElement = target.nextElementSibling as HTMLElement
+                  if (nextElement) {
+                    nextElement.style.display = 'block'
+                  }
                 }}
               />
               <FaTooth className="text-white text-2xl hidden" />
