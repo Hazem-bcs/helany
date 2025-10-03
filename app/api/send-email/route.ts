@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
           <div class="container">
             <div class="header">
               <h1>🦷 تأكيد موعدك</h1>
-              <p>عيادة د. محمد حلاني للأسنان</p>
+              <p>عيادة د. محمد حيلاني للأسنان</p>
             </div>
             <div class="content">
               <h2>عزيزي/عزيزتي ${appointmentData.patient_name}</h2>
@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
               <p class="phone-number">+963 962 625 044</p>
             </div>
             <div class="footer">
-              <p>عيادة د. محمد حلاني للأسنان</p>
+              <p>عيادة د. محمد حيلاني للأسنان</p>
               <p>جامعة قرطبة كلية طب الاسنان<br />جانب ساعة باب الفرج</p>
             </div>
           </div>
@@ -89,7 +89,7 @@ export async function POST(request: NextRequest) {
           <div class="container">
             <div class="header">
               <h1>✅ تم قبول موعدك</h1>
-              <p>عيادة د. محمد حلاني للأسنان</p>
+              <p>عيادة د. محمد حيلاني للأسنان</p>
             </div>
             <div class="content">
               <h2>عزيزي/عزيزتي ${appointmentData.patient_name}</h2>
@@ -113,7 +113,7 @@ export async function POST(request: NextRequest) {
               <p class="phone-number">+963 962 625 044</p>
             </div>
             <div class="footer">
-              <p>عيادة د. محمد حلاني للأسنان</p>
+              <p>عيادة د. محمد حيلاني للأسنان</p>
               <p>جامعة قرطبة كلية طب الاسنان<br />جانب ساعة باب الفرج</p>
             </div>
           </div>
@@ -140,7 +140,7 @@ export async function POST(request: NextRequest) {
           <div class="container">
             <div class="header">
               <h1>❌ تم رفض موعدك</h1>
-              <p>عيادة د. محمد حلاني للأسنان</p>
+              <p>عيادة د. محمد حيلاني للأسنان</p>
             </div>
             <div class="content">
               <h2>عزيزي/عزيزتي ${appointmentData.patient_name}</h2>
@@ -164,7 +164,7 @@ export async function POST(request: NextRequest) {
               <p class="phone-number">+963 962 625 044</p>
             </div>
             <div class="footer">
-              <p>عيادة د. محمد حلاني للأسنان</p>
+              <p>عيادة د. محمد حيلاني للأسنان</p>
               <p>جامعة قرطبة كلية طب الاسنان<br />جانب ساعة باب الفرج</p>
             </div>
           </div>

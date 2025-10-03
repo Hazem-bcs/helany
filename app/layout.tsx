@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'عيادة د. محمد حلاني للأسنان',
+  title: 'عيادة د. محمد حيلاني للأسنان',
   description: 'عيادة أسنان احترافية تقدم أفضل خدمات طب الأسنان في حلب',
   keywords: 'طبيب أسنان, عيادة أسنان, تبييض أسنان, تقويم أسنان, زراعة أسنان, حلب',
   authors: [{ name: 'Dr. Mohammad Helany' }],
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   openGraph: {
-    title: 'عيادة د. محمد حلاني للأسنان',
+    title: 'عيادة د. محمد حيلاني للأسنان',
     description: 'عيادة أسنان احترافية تقدم أفضل خدمات طب الأسنان',
     type: 'website',
     locale: 'ar_AR',

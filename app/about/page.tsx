@@ -12,7 +12,7 @@ export default function AboutPage() {
       <section className="bg-gradient-to-r from-primary to-secondary text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">عن الطبيب</h1>
-          <p className="text-xl text-gray-100">د. محمد حلاني - تشخيص ومعالجة أمراض اللثة والفم والأسنان</p>
+          <p className="text-xl text-gray-100">د. محمد حيلاني - تشخيص ومعالجة أمراض اللثة والفم والأسنان</p>
         </div>
       </section>
 
@@ -27,14 +27,14 @@ export default function AboutPage() {
                   {!imageError ? (
                     <img 
                       src="/images/doctor.jpg" 
-                      alt="د. محمد حلاني"
+                      alt="د. محمد حيلاني"
                       className="w-full h-full object-cover"
                       onError={() => setImageError(true)}
                     />
                   ) : (
                     <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-primary to-secondary">
                       <span className="text-8xl text-white mb-4">👨‍⚕️</span>
-                      <p className="text-white text-lg font-semibold">د. محمد حلاني</p>
+                          <p className="text-white text-lg font-semibold">د. محمد حيلاني</p>
                     </div>
                   )}
                 </div>
@@ -46,12 +46,12 @@ export default function AboutPage() {
 
             {/* Text Content */}
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">د. محمد حلاني</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-primary">د. محمد حيلاني</h2>
               <p className="text-xl text-secondary font-semibold">طالب سنة رابعة - كلية طب الأسنان</p>
               
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  مرحباً بكم! أنا محمد حلاني، طالب في السنة الرابعة بكلية طب الأسنان في جامعة قرطبة بحلب. أؤمن بأن كل مريض يستحق أفضل رعاية ممكنة، وأسعى دائماً لتقديم خدمات طبية عالية الجودة بأحدث التقنيات.
+                  مرحباً بكم! أنا محمد حيلاني، طالب في السنة الرابعة بكلية طب الأسنان في جامعة قرطبة بحلب. أؤمن بأن كل مريض يستحق أفضل رعاية ممكنة، وأسعى دائماً لتقديم خدمات طبية عالية الجودة بأحدث التقنيات.
                 </p>
                 <p>
                   حاصل على شهادة تدريب لمدة سنتين وقد تعاملت مع العديد من المرضى من قبل. لدي شهادة إسعافات أولية وشهادات خبرة في مجال طب الأسنان والتعامل مع المرضى. أركز في عملي على الجمع بين المعرفة الأكاديمية والتطبيق العملي لضمان حصول مرضاي على أفضل النتائج.

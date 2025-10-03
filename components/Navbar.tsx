@@ -25,7 +25,7 @@ export default function Navbar() {
             <div className="bg-primary p-2 rounded-lg group-hover:bg-secondary transition-colors duration-300">
               <Image 
                 src="/images/logo.png" 
-                alt="شعار عيادة د. محمد حلاني" 
+                alt="شعار عيادة د. محمد حيلاني" 
                 width={32} 
                 height={32}
                 className="w-8 h-8"
@@ -41,7 +41,7 @@ export default function Navbar() {
               <FaTooth className="text-white text-2xl hidden" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-primary">د. محمد حلاني</span>
+              <span className="text-xl font-bold text-primary">د. محمد حيلاني</span>
               <span className="text-sm text-gray-600">عيادة الأسنان</span>
             </div>
           </Link>

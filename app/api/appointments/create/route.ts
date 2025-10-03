@@ -96,7 +96,7 @@ export async function POST(request: NextRequest) {
         },
         body: JSON.stringify({
           to: email,
-          subject: 'تأكيد موعدك - عيادة د. محمد حلاني',
+          subject: 'تأكيد موعدك - عيادة د. محمد حيلاني',
           type: 'confirmation',
           appointmentData: {
             patient_name,

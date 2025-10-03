@@ -13,7 +13,7 @@ export default function Footer() {
                 <FaTooth className="text-primary text-2xl" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">د. محمد حلاني</h3>
+                <h3 className="text-xl font-bold">د. محمد حيلاني</h3>
                 <p className="text-sm text-accent">عيادة الأسنان</p>
               </div>
             </div>
@@ -120,7 +120,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-white border-opacity-20 mt-8 pt-6 text-center text-sm text-gray-200">
-          <p>© {new Date().getFullYear()} عيادة د. محمد حلاني للأسنان. جميع الحقوق محفوظة.</p>
+          <p>© {new Date().getFullYear()} عيادة د. محمد حيلاني للأسنان. جميع الحقوق محفوظة.</p>
         </div>
       </div>
     </footer>

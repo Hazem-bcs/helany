@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'عيادة د. محمد حلاني للأسنان',
-    short_name: 'د. حلاني',
+    name: 'عيادة د. محمد حيلاني للأسنان',
+    short_name: 'د. حيلاني',
     description: 'عيادة أسنان احترافية تقدم أفضل خدمات طب الأسنان',
     start_url: '/',
     display: 'standalone',
