@@ -31,17 +31,19 @@ CREATE INDEX IF NOT EXISTS idx_available_slots_date ON available_slots(date);
 
 INSERT INTO available_slots (date, time, is_available)
 SELECT 
+  date_series::date as date,
+  (time '09:00' + (slot * INTERVAL '30 minutes'))::time as time,
+  true as is_available
+FROM 
   generate_series(
     CURRENT_DATE,
     CURRENT_DATE + INTERVAL '30 days',
     '1 day'::interval
-  )::date as date,
-  time_slot::time as time,
-  true as is_available
-FROM 
-  generate_series('09:00'::time, '20:00'::time, '30 minutes') as time_slot
+  ) as date_series,
+  generate_series(0, 22) as slot  -- 0 to 22 = 23 slots (9:00 AM to 8:30 PM)
 WHERE 
-  EXTRACT(DOW FROM generate_series(CURRENT_DATE, CURRENT_DATE + INTERVAL '30 days', '1 day'::interval)) NOT IN (5) -- Exclude Friday
+  EXTRACT(DOW FROM date_series) NOT IN (5)  -- Exclude Friday (5 = Friday)
+  AND (time '09:00' + (slot * INTERVAL '30 minutes'))::time <= time '20:00'
 ON CONFLICT (date, time) DO NOTHING;
 
 -- Enable Row Level Security (RLS)
